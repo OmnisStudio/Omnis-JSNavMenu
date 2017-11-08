@@ -1,0 +1,4 @@
+If pPathLine=1
+	Quit method $cinst.$buildcascadelistcountriesforcontinent(iCurrentPathList.1.iCurrentPath)
+End If
+Quit method $cinst.$buildcascadelistcitiesforcountry(iCurrentPathList.2.iCurrentPath)

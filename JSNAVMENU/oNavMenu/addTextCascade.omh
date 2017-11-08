@@ -1,0 +1,1 @@
+Do pList.$add(kNavMenuTypeCascade,"Text","Change menu text properties",0,1000,"text")

@@ -1,0 +1,8 @@
+If iCurrentPathList.$linecount>pIdent
+	For lLineNumber from iCurrentPathList.$linecount to pIdent+1 step -1
+		Do iCurrentPathList.$remove(lLineNumber)
+	End For
+Else If iCurrentPathList.$linecount<pIdent
+	Do iCurrentPathList.$add()
+End If
+Calculate iCurrentPathList.[pIdent].C1 as pTag

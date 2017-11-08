@@ -1,0 +1,16 @@
+;  Each line in iCurrentPathList corresponds to the entry at the relevant depth in the breadcrumb e.g. Continents are line 1, Countries are line 2....
+;  We always add the continent list (with an empty text string) as the root of the breadcrumb
+Do method defineMenuList (lList)
+Do lList.$add(kNavMenuTypeCascade,style(kEscBmp,2033),"",kNavMenuFlagBreadcrumb+kNavMenuFlagBreadcrumbSeparator,0,"",row(iContinentList))
+Calculate lLineCount as iCurrentPathList.$linecount
+For lLineNumber from 1 to lLineCount step 1
+	Calculate iCurrentPathList.$line as lLineNumber
+	Calculate lCascadeList as $cinst.$buildbreadcrumbcascadelist(lLineNumber)
+	If lLineNumber=2
+		Calculate lFlags as lBaseFlags+lFlagsExtra
+	Else
+		Calculate lFlags as lBaseFlags
+	End If
+	Do lList.$add(pick(lLineNumber=3,kNavMenuTypeCascade,kNavMenuTypeEntry),con(style(kEscBmp,1710)," ",iCurrentPathList.iCurrentPath),"",lFlags,lLineNumber,iCurrentPathList.iCurrentPath,row(lCascadeList))     ;; con("Description",chr(13),"again")
+End For
+Quit method lList

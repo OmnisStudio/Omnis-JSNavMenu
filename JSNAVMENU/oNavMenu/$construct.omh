@@ -1,0 +1,43 @@
+Calculate iIsWindow as pIsWindow
+If not(pIsWindow)
+	Calculate iIcon10000 as iconurl(111301)     ;; downloads image
+	Calculate iIcon10001 as iconurl(111303)     ;; books image
+	Calculate iIcon10002 as iconurl(111302)     ;; media image
+End If
+
+Do method defineMenuList (iTextCascadeList)
+Do iTextCascadeList.$add(kNavMenuTypeHeading,"Hot Heading","A hot heading",0,999)
+Do iTextCascadeList.$add(kNavMenuTypeHeading,"Headings","Properties for heading text",kNavMenuFlagDisabled)
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font","",0,1020,"headingfont")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font size","",0,1021,"headingfontsize")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font style","",0,1022,"headingfontstyle")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change text colour","",0,1033,"headingfontcolor")
+Do iTextCascadeList.$add(kNavMenuTypeHeading,"Hot headings","Properties for hot heading text",kNavMenuFlagDisabled)
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font style","",0,1023,"hotheadingfontstyle")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change text colour","",kNavMenuFlagEndOfRowOrColumn,1024,"hotheadingfontcolor")
+Do iTextCascadeList.$add(kNavMenuTypeHeading,"Normal entries","Properties for normal entry text",kNavMenuFlagDisabled)
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font","",0,1000,"font")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font size","",0,1001,"fontsize")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font style","",0,1002,"fontstyle")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change text colour","",0,1003,"fontcolor")
+Do iTextCascadeList.$add(kNavMenuTypeHeading,"Hot normal entries","Properties for hot normal entry text",kNavMenuFlagDisabled)
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font style","",0,1003,"hotfontstyle")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change text colour","",kNavMenuFlagEndOfRowOrColumn,1004,"hotfontcolor")
+Do iTextCascadeList.$add(kNavMenuTypeHeading,"Descriptions","Properties for description text",kNavMenuFlagDisabled)
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font","",0,1010,"descfont")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font size","",0,1011,"descfontsize")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change font style","",0,1012,"descfontstyle")
+Do iTextCascadeList.$add(kNavMenuTypeEntry,"Change text colour","",kNavMenuFlagEndOfRowOrColumn,1013,"descfontcolor")
+
+Do iCurrentPathList.$define(iCurrentPath)
+Do iCurrentPathList.$add("Europe")
+Do iCurrentPathList.$add("United Kingdom")
+Do iCurrentPathList.$add("London")
+
+Do method defineMenuList (iContinentList)
+Do iContinentList.$add(kNavMenuTypeEntry,"Africa","",0,1,"Africa")
+Do iContinentList.$add(kNavMenuTypeEntry,"Asia","",0,1,"Asia")
+Do iContinentList.$add(kNavMenuTypeEntry,"Australasia","",0,1,"Australasia")
+Do iContinentList.$add(kNavMenuTypeEntry,"Europe","",0,1,"Europe")
+Do iContinentList.$add(kNavMenuTypeEntry,"North America","",0,1,"North America")
+Do iContinentList.$add(kNavMenuTypeEntry,"South America","",0,1,"South America")

@@ -1,0 +1,49 @@
+Switch pLineTag
+	Case "headingfont"
+		If iIsWindow
+			Calculate pControl.$headingfont as 2
+		Else
+			Calculate pControl.$headingfont as "Courier New"
+		End If
+	Case "headingfontsize"
+		Calculate pControl.$headingfontsize as 10
+	Case "headingfontstyle"
+		Calculate pControl.$headingfontstyle as kItalic
+	Case "headingfontcolor"
+		Calculate pControl.$headingtextcolor as kBlue
+	Case "hotheadingfontstyle"
+		Calculate pControl.$hotheadingfontstyle as kItalic+kBold
+	Case "hotheadingfontcolor"
+		Calculate pControl.$hotheadingtextcolor as kDarkGreen
+	Case "font"
+		If iIsWindow
+			Calculate pControl.$font as 3
+		Else
+			Calculate pControl.$fontname as "Times New Roman"
+		End If
+	Case "fontsize"
+		Calculate pControl.$fontsize as 8
+	Case "fontstyle"
+		Calculate pControl.$fontstyle as kBold
+	Case "fontcolor"
+		Calculate pControl.$textcolor as kDarkGreen
+	Case "hotfontstyle"
+		Calculate pControl.$hotfontstyle as kBold+kUnderline
+	Case "hotfontcolor"
+		Calculate pControl.$hottextcolor as kMagenta
+	Case "descfont"
+		If iIsWindow
+			Calculate pControl.$descriptionfont as 2
+		Else
+			Calculate pControl.$descriptionfont as "Courier"
+		End If
+	Case "descfontsize"
+		Calculate pControl.$descriptionfontsize as 6
+	Case "descfontstyle"
+		Calculate pControl.$descriptionfontstyle as kBold
+	Case "descfontcolor"
+		Calculate pControl.$descriptiontextcolor as kDarkGreen
+	Default
+		Quit method kFalse
+End Switch
+Quit method kTrue

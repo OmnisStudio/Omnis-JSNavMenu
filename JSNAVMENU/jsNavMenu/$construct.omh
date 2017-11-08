@@ -1,0 +1,5 @@
+;  Enter your initialization code here
+
+Calculate iNavMenu as iNavObj.$buildAmazon()
+Calculate iNavMenu2 as iNavObj.$buildDell()
+Calculate iNavMenu3 as iNavObj.$buildBreadcrumb()

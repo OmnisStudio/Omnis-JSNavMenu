@@ -1,0 +1,6 @@
+;  create iconset from icons in #icons for navigation menu
+
+Calculate lIconSetPath as con(sys(215),'html',sys(9),'icons',sys(9),'jsgallery')
+Do method writeIcons (lIconSetPath,'jsnavmenu','111301,111302,111303')
+
+Do $clib.$remoteforms.jsNavMenu.$open("*")

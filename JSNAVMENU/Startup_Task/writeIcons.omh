@@ -1,0 +1,19 @@
+;  copy icons from #icons into iconset folder
+
+Do FileOps.$doesfileexist(pIconSetPath) Returns lFlag
+If not(lFlag)
+	Do FileOps.$createdir(pIconSetPath) Returns lStatus
+End If
+
+While len(pIcons)
+	Calculate lIconID as strtok('pIcons',',')
+	Do OmnisIcn Library.$getpict(lIconID,kTransparent) Returns iBinary
+	Do pictsize(iBinary,lWidth,lHeight)
+	Calculate lFileName as con(pIconSetPath,sys(9),pPrefix,'_',lIconID,'_',lWidth,'x',lHeight,'.png')
+	Do FileOps.$doesfileexist(lFileName) Returns lFlag
+	If not(lFlag)
+		Do pictformat(iBinary) Returns lFormat
+		Do pictconvto(lFormat,iBinary,'PNG') Returns iBinary
+		WriteBinFile (lFileName,iBinary) Returns lStatus
+	End If
+End While

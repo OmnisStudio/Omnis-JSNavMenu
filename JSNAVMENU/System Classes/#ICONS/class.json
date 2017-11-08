@@ -1,0 +1,88 @@
+{
+	"classtype": "kSystemtable",
+	"internalversion": 4,
+	"iconversion": 3,
+	"nextident": 9,
+	"properties": {
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2017-01-10 10:40:50",
+		"desc": "",
+		"external": false,
+		"moddate": "2015-04-13 09:21:45",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": "1"
+	},
+	"iconids": [
+		{
+			"iconid": 111301,
+			"pageid": 7,
+			"iconpos": 1,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 111302,
+			"pageid": 8,
+			"iconpos": 1,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 111303,
+			"pageid": 9,
+			"iconpos": 1,
+			"defaultsize": 1,
+			"flags": 0
+		}
+	],
+	"pages": [
+		{
+			"pageid": 7,
+			"name": "Navmenu1",
+			"bitmapid": 1,
+			"flags": 1856
+		},
+		{
+			"pageid": 8,
+			"name": "Navmenu2",
+			"bitmapid": 2,
+			"flags": 1856
+		},
+		{
+			"pageid": 9,
+			"name": "Navmenu3",
+			"bitmapid": 3,
+			"flags": 1856
+		}
+	],
+	"bitmaps": [
+		{
+			"bitmapid": 1,
+			"solid": {
+				"$png": "solid1.png"
+			},
+			"alpha": {
+				"$png": "alpha1.png"
+			}
+		},
+		{
+			"bitmapid": 2,
+			"solid": {
+				"$png": "solid2.png"
+			},
+			"alpha": {
+				"$png": "alpha2.png"
+			}
+		},
+		{
+			"bitmapid": 3,
+			"solid": {
+				"$png": "solid3.png"
+			},
+			"alpha": {
+				"$png": "alpha3.png"
+			}
+		}
+	]
+}

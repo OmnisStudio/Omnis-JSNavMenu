@@ -1,0 +1,6 @@
+On evClick
+	If $cinst.$objs.PagedPane.$currentpage<3
+		Do $cinst.$objs.PagedPane.$currentpage.$assign($cinst.$objs.PagedPane.$currentpage+1)
+	Else
+		Calculate $cinst.$objs.PagedPane.$currentpage as 1
+	End If

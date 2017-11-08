@@ -1,0 +1,20 @@
+Do method defineMenuList (lCascadeList)
+Switch pTag
+	Case "books"
+		Do lCascadeList.$add(kNavMenuTypeHeading,"Books","",kNavMenuFlagDisabled)
+		Do lCascadeList.$add(kNavMenuTypeEntry,"Best sellers","Top 1000 books",0,200)
+		Do lCascadeList.$add(kNavMenuTypeEntry,"eBooks","For e-readers and tablets",0,201)
+		Do lCascadeList.$add(kNavMenuTypeImage,"Pre-order","",0,202,"",row(iIcon10001))
+	Case "media"
+		Do lCascadeList.$add(kNavMenuTypeHeading,"Media","",kNavMenuFlagDisabled)
+		Do lCascadeList.$add(kNavMenuTypeEntry,"Software store","Buy latest tools, games, anti-virus",0,300)
+		Do lCascadeList.$add(kNavMenuTypeImage,"Omnis Studio","",0,301,"",row(iIcon10002))
+	Case "downloads"
+		Do lCascadeList.$add(kNavMenuTypeHeading,"Digital Downloads","",kNavMenuFlagDisabled)
+		Do lCascadeList.$add(kNavMenuTypeEntry,"Digital software store","Download most popular titles",0,400)
+		Do lCascadeList.$add(kNavMenuTypeEntry,"Your software library","View all your purchases",0,401)
+		Do lCascadeList.$add(kNavMenuTypeImage,"New","latest release",0,402,"",row(iIcon10000,10,5))
+	Case "text"
+		Calculate lCascadeList as iTextCascadeList
+End Switch
+Calculate pControl.$cascadecontents as lCascadeList

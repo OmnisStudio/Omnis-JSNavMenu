@@ -1,0 +1,15 @@
+Do lMemberList.$define(lMemberListString)
+Repeat
+	Calculate lMemberListString as strtok('pCountryListString',",")
+	If lMemberListString<>""
+		Do lMemberList.$add(lMemberListString)
+	End If
+Until lMemberListString=""
+
+Do method defineMenuList (lCascadeList)
+Calculate lLineCount as lMemberList.$linecount
+For lLineNumber from 1 to lLineCount step 1
+	Calculate lMemberList.$line as lLineNumber
+	Do lCascadeList.$add(kNavMenuTypeEntry,lMemberList.lMemberListString,"",0,pLevel,lMemberList.lMemberListString)
+End For
+Quit method lCascadeList

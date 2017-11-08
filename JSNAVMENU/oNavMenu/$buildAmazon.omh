@@ -1,0 +1,9 @@
+Do method defineMenuList (lDepartmentList)
+Do lDepartmentList.$add(kNavMenuTypeCascade,"Books","",0,100,"books")
+Do lDepartmentList.$add(kNavMenuTypeCascade,"Media","",0,101,"media")
+Do lDepartmentList.$add(kNavMenuTypeCascade,"Downloads","",0,102,"downloads")
+Do method addTextCascade (lDepartmentList)
+
+Do method defineMenuList (lAmazon)
+Do lAmazon.$add(kNavMenuTypeCascade,con("Shop by",kCr,style(kEscStyle,kBold),"Department"),"",0,1,"",row(lDepartmentList,kNavMenuCascadeFlagOpenOnParentEdge+kNavMenuCascadeFlagExpand,kNavMenuSideBottom,kNavMenuSideTop+kNavMenuSideBottom+kNavMenuSideLeft+kNavMenuSideRight))
+Quit method lAmazon

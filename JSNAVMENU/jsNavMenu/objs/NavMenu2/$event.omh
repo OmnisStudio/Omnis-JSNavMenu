@@ -1,0 +1,4 @@
+On evMenuEntryClicked
+	If not(iNavObj.$handleclick($cfield,pLineTag))
+		Do $cinst.$showmessage(con('Ident ',pLineIdent),'Click')
+	End If

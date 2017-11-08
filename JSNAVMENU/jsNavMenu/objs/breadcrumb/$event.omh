@@ -1,0 +1,5 @@
+On evMenuEntryClicked
+	Do iNavObj.$breadcrumbclick(pLineIdent,pLineTag)
+	Calculate iNavMenu3 as iNavObj.$buildBreadcrumb()
+On evEmptySpaceClicked
+	Sound bell

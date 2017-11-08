@@ -1,0 +1,32 @@
+Do method defineMenuList (lDellList)
+Do method defineMenuList (lCascadeList)
+Do lCascadeList.$add(kNavMenuTypeHeading,"Desktops","",0,1)
+Do lCascadeList.$add(kNavMenuTypeEntry,"For home",con("Entry level",kCr,"at low prices"),0,1101)
+Do lCascadeList.$add(kNavMenuTypeEntry,"For work","Top specification",kNavMenuFlagEndOfRowOrColumn,1102)
+
+Do lDellList.$add(kNavMenuTypeCascade,"Desktops","",kNavMenuFlagHorizontalLayout,2,"",row(lCascadeList))
+
+Do lCascadeList.$clear()
+Do lCascadeList.$add(kNavMenuTypeHeading,"Laptops","",0,1)
+Do lCascadeList.$add(kNavMenuTypeEntry,"Most popular","Best value",0,1201)
+Do lCascadeList.$add(kNavMenuTypeEntry,"Latest","Free upgrade",kNavMenuFlagEndOfRowOrColumn,1202)
+
+Do lDellList.$add(kNavMenuTypeCascade,"Laptops","Top brands",0,1,"",row(lCascadeList))
+
+Do lCascadeList.$clear()
+Do lCascadeList.$add(kNavMenuTypeHeading,"Servers","",0,1)
+Do lCascadeList.$add(kNavMenuTypeEntry,"Enterprise","High performance",0,1301)
+Do lCascadeList.$add(kNavMenuTypeEntry,"Small office","Quick setup",kNavMenuFlagEndOfRowOrColumn,1302)
+
+Do lDellList.$add(kNavMenuTypeCascade,"Servers","",0,3,"",row(lCascadeList))
+
+Do lCascadeList.$clear()
+Do lCascadeList.$add(kNavMenuTypeHeading,"Tablets","",0,1)
+Do lCascadeList.$add(kNavMenuTypeEntry,"Large screen","HD display",0,1401)
+Do lCascadeList.$add(kNavMenuTypeEntry,"Small screen","Latest OS",kNavMenuFlagEndOfRowOrColumn,1402)
+
+Do lDellList.$add(kNavMenuTypeCascade,con("Tablets ",kCr," & e-readers"),"",0,3,"",row(lCascadeList))
+
+Do lDellList.$add(kNavMenuTypeEntry,"Hot deals","",0,5000)
+Do lDellList.$add(kNavMenuTypeCascade,"Text","Change text properties",0,1000,"",row(iTextCascadeList))
+Quit method lDellList

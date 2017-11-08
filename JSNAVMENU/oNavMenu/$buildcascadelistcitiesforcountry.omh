@@ -1,0 +1,55 @@
+Switch pCountry
+	Case "France"     ;; Europe
+		Calculate lCities as "Paris,Marseille,Lyon,Toulouse,Nice"
+	Case "Germany"
+		Calculate lCities as "Berlin,Hamburg,Munich,Cologne,Frankfurt"
+	Case "Italy"
+		Calculate lCities as "Rome,Milan,Naples,Turin,Palermo"
+	Case "Spain"
+		Calculate lCities as "Madrid,Barcelona,Valencia,Sevilla,Zaragoza"
+	Case "United Kingdom"
+		Calculate lCities as "London,Birmingham,Leeds,Glasgow,Sheffield"
+		
+	Case "Algeria"     ;; Africa
+		Calculate lCities as "Algiers,Oran,Costantine,Annaba"
+	Case "Angola"
+		Calculate lCities as "Luanda,Cabinda,Huambo,Lubango,Kuito"
+	Case "Libya"
+		Calculate lCities as "Tripoli,Benghazi,Misrata,Zawiya"
+	Case "Morocco"
+		Calculate lCities as "Casablanca,Fès,Marrakech,Salé,Tangier"
+	Case "Egypt"
+		Calculate lCities as "Cairo,Alexandria,Giza,,Shubra El-Kheima,Port Said"
+	Case "Ethiopia"
+		Calculate lCities as "Addis Ababa,Dire Dawa,Mekele,Nazrēt,Bahir Dar"
+	Case "Namibia"
+		Calculate lCities as "Windhoek,Rundu,Walvis Bay,Swakopmund,Oshakati"
+	Case "South Africa"
+		Calculate lCities as "Cape Town,Durban,Johannesburg,Soweto,Pretoria"
+		
+	Case "China"     ;; Asia
+		Calculate lCities as "Shanghai,Beijing,Tianjin,Guangzhou,Shenzhen"
+	Case "Malaysia"
+		Calculate lCities as "Kuala Lumpur,Seberang Perai,George Town,Kajang,Klang"
+	Case "Taiwan"
+		Calculate lCities as "New Taipei,Kaohsiung,Taichung,Taipei,Taoyuan"
+		
+	Case "Australia"     ;; Australasia
+		Calculate lCities as "Sydney,Melbourne,Brisbane,Perth,Adelaide"
+	Case "New Zealand"
+		Calculate lCities as "Auckland,Wellington,Christchurch,Hamilton,Napier-Hastings"
+		
+	Case "Canada"     ;; North America
+		Calculate lCities as "Toronto,Montreal,Calgary,Ottawa,Edmonton"
+	Case "USA"
+		Calculate lCities as "New York,Los Angeles,Chicago,Houston,Philadelphia"
+		
+	Case "Argentina"     ;; South America
+		Calculate lCities as "Buenos Aires,Córdoba,Rosario,Mendoza,San Miguel de Tucumán"
+	Case "Brazil"
+		Calculate lCities as "São Paulo,Rio de Janeiro,Salvador,Brasília,Fortaleza"
+	Case "Uruguay"
+		Calculate lCities as "Montevideo,Salto,Ciudad de la Costa,Paysandú,Las Piedras"
+End Switch
+
+Quit method $cinst.$buildcascadelist(lCities,3)

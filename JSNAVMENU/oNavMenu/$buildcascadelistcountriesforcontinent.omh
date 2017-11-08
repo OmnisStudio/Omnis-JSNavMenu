@@ -1,0 +1,15 @@
+Switch pContinent
+	Case "Africa"
+		Calculate lCountryListString as "Algeria,Angola,Libya,Morocco,Egypt,Ethiopia,Namibia,South Africa"
+	Case "Asia"
+		Calculate lCountryListString as "China,Malaysia,Taiwan"
+	Case "Australasia"
+		Calculate lCountryListString as "Australia,New Zealand"
+	Case "Europe"
+		Calculate lCountryListString as "France,Germany,Italy,Spain,United Kingdom"
+	Case "North America"
+		Calculate lCountryListString as "Canada,USA"
+	Case "South America"
+		Calculate lCountryListString as "Argentina,Brazil,Uruguay"
+End Switch
+Quit method $cinst.$buildcascadelist(lCountryListString,2)
